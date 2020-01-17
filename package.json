@@ -1,22 +1,23 @@
 {
-  "name": "typescript-lit-html-plugin",
+  "name": "typescript-html-plugin",
   "version": "0.9.0",
-  "description": "TypeScript language service plugin that adds IntelliSense for html tagged templates",
+  "description": "TypeScript language service plugin that adds IntelliSense for html and handledom tagged templates",
   "keywords": [
     "TypeScript",
     "html",
     "literal html",
-    "templates"
+    "templates",
+    "handledom"
   ],
   "main": "lib/index.js",
   "author": "Microsoft",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Microsoft/typescript-lit-html-plugin.git"
+    "url": "https://github.com/Microsoft/typescript-html-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/Microsoft/typescript-lit-html-plugin/issues"
+    "url": "https://github.com/Microsoft/typescript-html-plugin/issues"
   },
   "dependencies": {
     "typescript-styled-plugin": "^0.13.0",
