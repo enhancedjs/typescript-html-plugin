@@ -1,5 +1,5 @@
 {
-  "name": "typescript-html-plugin",
+  "name": "@tomko/typescript-html-plugin",
   "version": "0.9.0",
   "description": "TypeScript language service plugin that adds IntelliSense for html and handledom tagged templates",
   "keywords": [
