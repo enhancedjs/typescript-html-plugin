@@ -1,13 +1,12 @@
 {
   "name": "@enhancedjs/typescript-html-plugin",
-  "version": "0.0.2",
-  "description": "TypeScript language service plugin that adds IntelliSense for html and handledom tagged templates",
+  "version": "0.0.3",
+  "description": "TypeScript language service plugin that adds IntelliSense for HTML tagged templates",
   "keywords": [
-    "TypeScript",
+    "typeScript",
     "html",
-    "literal html",
-    "templates",
-    "handledom"
+    "template",
+    "string"
   ],
   "main": "lib/index.js",
   "author": "Microsoft",

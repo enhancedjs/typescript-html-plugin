@@ -11,7 +11,7 @@ interface TsHtmlPluginConfiguration {
 }
 
 const defaultConfiguration: TsHtmlPluginConfiguration = {
-    tags: ['html', 'raw', 'handledom'],
+    tags: ['html', 'vue', 'handledom'],
     format: {
         enabled: true,
     },
