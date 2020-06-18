@@ -1,9 +1,9 @@
-import { getTemplateSettings } from 'typescript-styled-plugin/lib/api';
+import { getTemplateSettings } from '@enhancedjs/typescript-css-plugin/lib/api';
+import * as ts from 'typescript/lib/tsserverlibrary';
 import { LanguageService } from 'vscode-html-languageservice';
+import { TemplateContext } from '../node_modules/typescript-template-language-service-decorator';
 import { getDocumentRegions } from './embeddedSupport';
 import { VirtualDocumentProvider } from './virtual-document-provider';
-import { TemplateContext } from '../node_modules/typescript-template-language-service-decorator';
-import * as ts from 'typescript/lib/tsserverlibrary';
 
 class NoopTemplateContext implements TemplateContext {
 

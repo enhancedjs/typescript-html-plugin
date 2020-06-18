@@ -3,7 +3,7 @@
 //
 // Original code forked from https://github.com/Quramy/ts-graphql-plugin
 
-import { StyledTemplateLanguageService } from 'typescript-styled-plugin/lib/api';
+import { CssTemplateLanguageService } from '@enhancedjs/typescript-css-plugin/lib/api';
 import { Logger, TemplateContext, TemplateLanguageService } from 'typescript-template-language-service-decorator';
 import * as ts from 'typescript/lib/tsserverlibrary';
 import { FoldingRange, LanguageService as HtmlLanguageService } from 'vscode-html-languageservice';
@@ -68,7 +68,7 @@ export default class HtmlTemplateLanguageService implements TemplateLanguageServ
         private readonly configuration: Configuration,
         private readonly virtualDocumentProvider: VirtualDocumentProvider,
         private readonly htmlLanguageService: HtmlLanguageService,
-        private readonly styledLanguageService: StyledTemplateLanguageService,
+        private readonly cssLanguageService: CssTemplateLanguageService,
         _logger: Logger
     ) { }
 
@@ -90,7 +90,7 @@ export default class HtmlTemplateLanguageService implements TemplateLanguageServ
     ): ts.CompletionEntryDetails {
         const entry = this.getCompletionItems(context, position);
         if (entry.type === 'styled') {
-            return this.styledLanguageService.getCompletionEntryDetails!(context, position, name);
+            return this.cssLanguageService.getCompletionEntryDetails!(context, position, name);
         }
 
         const item = entry.value.items.find(x => x.label === name);
@@ -122,7 +122,7 @@ export default class HtmlTemplateLanguageService implements TemplateLanguageServ
                 return hover ? this.translateHover(hover, position, context) : undefined;
 
             case 'css':
-                return this.styledLanguageService.getQuickInfoAtPosition(context, position);
+                return this.cssLanguageService.getQuickInfoAtPosition(context, position);
         }
 
         return undefined;
@@ -204,11 +204,11 @@ export default class HtmlTemplateLanguageService implements TemplateLanguageServ
     public getSemanticDiagnostics(
         context: TemplateContext
     ): ts.Diagnostic[] {
-        return this.styledLanguageService.getSemanticDiagnostics(context);
+        return this.cssLanguageService.getSemanticDiagnostics(context);
     }
 
     public getSupportedCodeFixes(): number[] {
-        return this.styledLanguageService.getSupportedCodeFixes();
+        return this.cssLanguageService.getSupportedCodeFixes();
     }
 
     public getCodeFixesAtPosition(
@@ -218,7 +218,7 @@ export default class HtmlTemplateLanguageService implements TemplateLanguageServ
         errorCodes: number[],
         format: ts.FormatCodeSettings
     ): ts.CodeAction[] {
-        return this.styledLanguageService.getCodeFixesAtPosition(context, start, end, errorCodes, format);
+        return this.cssLanguageService.getCodeFixesAtPosition(context, start, end, errorCodes, format);
     }
 
     public getReferencesAtPosition(
@@ -287,7 +287,7 @@ export default class HtmlTemplateLanguageService implements TemplateLanguageServ
             case 'css': {
                 const styledCompletions: StyledCachedCompletionList = {
                     type: 'styled',
-                    value: this.styledLanguageService.getCompletionsAtPosition(context, position),
+                    value: this.cssLanguageService.getCompletionsAtPosition(context, position),
                 };
                 this._completionsCache.updateCached(context, position, styledCompletions);
                 return styledCompletions;
