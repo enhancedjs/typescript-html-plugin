@@ -3,7 +3,7 @@
 //
 // Original code forked from https://github.com/Quramy/ts-graphql-plugin
 
-import { CssTemplateLanguageService } from '@enhancedjs/typescript-css-plugin/lib/api';
+import { StyledTemplateLanguageService } from 'typescript-styled-plugin/lib/api';
 import { Logger, TemplateContext, TemplateLanguageService } from 'typescript-template-language-service-decorator';
 import * as ts from 'typescript/lib/tsserverlibrary';
 import { FoldingRange, LanguageService as HtmlLanguageService } from 'vscode-html-languageservice';
@@ -68,7 +68,7 @@ export default class HtmlTemplateLanguageService implements TemplateLanguageServ
         private readonly configuration: Configuration,
         private readonly virtualDocumentProvider: VirtualDocumentProvider,
         private readonly htmlLanguageService: HtmlLanguageService,
-        private readonly cssLanguageService: CssTemplateLanguageService,
+        private readonly cssLanguageService: StyledTemplateLanguageService,
         _logger: Logger
     ) { }
 

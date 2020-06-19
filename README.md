@@ -5,3 +5,5 @@ This is a fork of [typescript-lit-html-plugin](https://github.com/microsoft/type
 This package is used by the following VS Code plugin:
 
 * [html-in-template-string-vscode](https://github.com/enhancedjs/html-in-template-string-vscode)
+
+_Notice: This package currently use `typescript-styled-plugin` version 0.13.0 instead of `@enhancedjs/typescript-css-plugin`._
