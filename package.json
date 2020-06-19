@@ -1,9 +1,9 @@
 {
   "name": "@enhancedjs/typescript-html-plugin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "TypeScript language service plugin that adds IntelliSense for HTML tagged templates",
   "keywords": [
-    "typeScript",
+    "typescript",
     "html",
     "template",
     "string"
@@ -13,16 +13,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Microsoft/typescript-html-plugin.git"
+    "url": "https://github.com/enhancedjs/typescript-html-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/Microsoft/typescript-html-plugin/issues"
+    "url": "https://github.com/enhancedjs/typescript-html-plugin/issues"
   },
   "dependencies": {
     "@enhancedjs/typescript-css-plugin": "^0.0.2",
     "typescript-template-language-service-decorator": "^2.2.0",
-    "vscode-html-languageservice": "^3.0.3",
-    "vscode-languageserver-types": "^3.15.1"
+    "vscode-html-languageservice": "^2.1.10",
+    "vscode-languageserver-types": "^3.13.0"
   },
   "files": [
     "lib"
