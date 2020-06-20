@@ -1,7 +1,7 @@
 {
   "name": "@enhancedjs/typescript-html-plugin",
-  "version": "0.0.5",
-  "description": "TypeScript language service plugin that adds IntelliSense for HTML tagged templates",
+  "version": "0.0.6",
+  "description": "TypeScript language service plugin that adds IntelliSense for HTML tagged templates.",
   "keywords": [
     "typescript",
     "html",
